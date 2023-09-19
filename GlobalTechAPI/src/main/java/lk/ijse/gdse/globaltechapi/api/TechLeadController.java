@@ -46,8 +46,8 @@ public class TechLeadController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE,path = "{id}")
-    public void getTechLeadInfo(String id){
-        System.out.println("get techlead");
+    public TechLeadDTO getTechLeadInfo(@PathVariable String id){
+        return techLeadService.getTechLeadInfo(id);
     }
 
     @DeleteMapping

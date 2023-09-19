@@ -11,4 +11,6 @@ public interface TechLeadService {
     TechLeadDTO save(TechLeadDTO techLeadDTO);
     ArrayList<TechLeadDTO> getAll();
 
+    TechLeadDTO getTechLeadInfo(String id);
+
 }

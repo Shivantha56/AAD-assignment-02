@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TechLeadServiceImpl implements TechLeadService {
@@ -46,6 +47,17 @@ public class TechLeadServiceImpl implements TechLeadService {
             System.out.println(add);
         }
         return getAllDTO;
+    }
+
+    @Override
+    public TechLeadDTO getTechLeadInfo(String id) {
+        Optional<TechLead> byId = techLeadRepository.findById(id);
+        TechLead techLead = null;
+        if (byId.isPresent()) {
+            techLead = byId.get();
+        }
+        return entityDTOConversion.getTechLeadDTO(techLead);
+
     }
 
 
