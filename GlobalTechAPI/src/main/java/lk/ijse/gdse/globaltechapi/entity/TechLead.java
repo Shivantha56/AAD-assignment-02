@@ -3,7 +3,7 @@ package lk.ijse.gdse.globaltechapi.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.lang.Nullable;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,10 +22,8 @@ public class TechLead implements SuperEntity {
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
-    private String contactNo;
-    @Column(nullable = false)
     private String email;
-    @Column(nullable = false)
+    @Column(nullable = false,columnDefinition = "TEXT")
     private String profileImage;
 
 }

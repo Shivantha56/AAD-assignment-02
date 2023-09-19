@@ -11,7 +11,6 @@ public class TechLeadDTO {
 
     private String employeeId;
     private String name;
-    private String age;
     private String email;
     private byte[] profile;
 
