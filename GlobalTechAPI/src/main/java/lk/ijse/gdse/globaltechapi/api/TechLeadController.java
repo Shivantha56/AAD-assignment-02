@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1/techlead")
 public class TechLeadController {
 
+    @GetMapping(path = "/test")
+    public String testApi(){
+        return "tech lead api test ok";
+    }
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void saveTechLead(@ModelAttribute TechLeadDTO techLeadDTO){
