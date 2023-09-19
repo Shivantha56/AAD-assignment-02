@@ -5,9 +5,13 @@ import lk.ijse.gdse.globaltechapi.entity.TechLead;
 import lk.ijse.gdse.globaltechapi.repository.TechLeadRepository;
 import lk.ijse.gdse.globaltechapi.service.TechLeadService;
 import lk.ijse.gdse.globaltechapi.util.EntityDTOConversion;
+import net.bytebuddy.matcher.StringMatcher;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 
 @Service
 public class TechLeadServiceImpl implements TechLeadService {
@@ -30,4 +34,19 @@ public class TechLeadServiceImpl implements TechLeadService {
         techLeadRepository.save(techLeadEntity);
         return techLeadDTO;
     }
+
+    @Override
+    public ArrayList<TechLeadDTO> getAll() {
+        ArrayList<TechLeadDTO> getAllDTO = new ArrayList<>();
+        List<TechLead> all = techLeadRepository.findAll();
+
+        for (TechLead get: all) {
+            TechLeadDTO techLeadDTO = entityDTOConversion.getTechLeadDTO(get);
+            boolean add = getAllDTO.add(techLeadDTO);
+            System.out.println(add);
+        }
+        return getAllDTO;
+    }
+
+
 }

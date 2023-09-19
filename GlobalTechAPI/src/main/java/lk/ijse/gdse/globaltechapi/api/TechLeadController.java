@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.annotation.MultipartConfig;
+import java.util.ArrayList;
 import java.util.Base64;
 
 @MultipartConfig()
@@ -36,9 +37,12 @@ public class TechLeadController {
         return techLeadService.save(new TechLeadDTO(employeeId,name,email,profile));
     }
 
-    @GetMapping(produces = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public void getAllTechLead(){
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ArrayList<TechLeadDTO> getAllTechLead(){
         System.out.println("get all tech lead");
+        ArrayList<TechLeadDTO> all = techLeadService.getAll();
+        System.out.println(all);
+        return all;
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE,path = "{id}")
