@@ -60,5 +60,11 @@ public class TechLeadServiceImpl implements TechLeadService {
 
     }
 
+    @Override
+    public String deleteTechLead(String id) {
+        techLeadRepository.deleteById(id);
+        return "TechLead Delete Success";
+    }
+
 
 }

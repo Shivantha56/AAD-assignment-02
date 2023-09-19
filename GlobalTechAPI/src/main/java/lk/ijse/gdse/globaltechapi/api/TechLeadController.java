@@ -50,9 +50,9 @@ public class TechLeadController {
         return techLeadService.getTechLeadInfo(id);
     }
 
-    @DeleteMapping
-    public void deleteTechLead(){
-        System.out.println("delete mapping");
+    @DeleteMapping(path = "{id}")
+    public String deleteTechLead(@PathVariable String id){
+        return techLeadService.deleteTechLead(id);
     }
     @PutMapping
     public void updateTechLead(){

@@ -13,4 +13,6 @@ public interface TechLeadService {
 
     TechLeadDTO getTechLeadInfo(String id);
 
+    String deleteTechLead(String id);
+
 }
