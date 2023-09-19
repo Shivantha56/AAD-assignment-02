@@ -26,4 +26,9 @@ public class TechLead implements SuperEntity {
     @Column(nullable = false,columnDefinition = "TEXT")
     private String profileImage;
 
+    public TechLead(String name, String email, String profileImage) {
+        this.name = name;
+        this.email = email;
+        this.profileImage = profileImage;
+    }
 }

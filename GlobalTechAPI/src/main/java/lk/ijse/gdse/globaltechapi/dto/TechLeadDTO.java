@@ -14,5 +14,9 @@ public class TechLeadDTO {
     private String email;
     private byte[] profile;
 
-
+    public TechLeadDTO(String name, String email, byte[] profile) {
+        this.name = name;
+        this.email = email;
+        this.profile = profile;
+    }
 }

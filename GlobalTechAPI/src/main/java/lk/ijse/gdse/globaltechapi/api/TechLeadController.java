@@ -3,11 +3,13 @@ package lk.ijse.gdse.globaltechapi.api;
 import lk.ijse.gdse.globaltechapi.dto.TechLeadDTO;
 import lk.ijse.gdse.globaltechapi.service.TechLeadService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.annotation.MultipartConfig;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Base64;
 
 @MultipartConfig()
@@ -54,9 +56,17 @@ public class TechLeadController {
     public String deleteTechLead(@PathVariable String id){
         return techLeadService.deleteTechLead(id);
     }
-    @PutMapping
-    public void updateTechLead(){
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PatchMapping("{id}")
+    public void updateTechLead(@PathVariable String id,
+                               @RequestPart String name,
+                               @RequestPart String email,
+                               @RequestPart byte[] profile){
+
+        System.out.println("==="+id+name+email);
+        TechLeadDTO techLeadDTO = new TechLeadDTO(name,email,profile);
+        techLeadService.updateTechLead(id,techLeadDTO);
     }
 
 }

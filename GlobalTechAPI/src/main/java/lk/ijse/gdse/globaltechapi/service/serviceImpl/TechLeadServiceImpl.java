@@ -66,5 +66,24 @@ public class TechLeadServiceImpl implements TechLeadService {
         return "TechLead Delete Success";
     }
 
+    @Override
+    public void updateTechLead(String id,TechLeadDTO techLeadDTO) {
+        Optional<TechLead> byId = techLeadRepository.findById("id");
+
+//        if (byId.isPresent()) {
+//            byId.get().setName(techLeadDTO.getName());
+//            byId.get().setEmail(techLeadDTO.getEmail());
+//            byId.get().setProfileImage("aluth eka");
+//        techLeadRepository.updateTechLeadsByEmployeeId(id,new TechLead(techLeadDTO.getName(),techLeadDTO.getEmail(),"wenas kara"));
+//
+//            techLeadRepository.save(new TechLead(techLeadDTO.getName(),techLeadDTO.getEmail(),"wenas kara"));
+//        }
+
+
+
+
+
+    }
+
 
 }

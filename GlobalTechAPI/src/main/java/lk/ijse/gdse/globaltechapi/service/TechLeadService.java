@@ -15,4 +15,6 @@ public interface TechLeadService {
 
     String deleteTechLead(String id);
 
+    void updateTechLead(String id,TechLeadDTO techLeadDTO);
+
 }
