@@ -36,7 +36,8 @@ public class TechLeadController {
 //        String name = techLeadDTO.getName();
 //        String email = techLeadDTO.getEmail();
 //        String profileImage = Base64.getEncoder().encodeToString(profile);
-        return techLeadService.save(new TechLeadDTO(employeeId,name,email,profile));
+        String profileImage = Base64.getEncoder().encodeToString(profile);
+        return techLeadService.save(new TechLeadDTO(employeeId,name,email,profileImage));
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -62,9 +63,9 @@ public class TechLeadController {
     public void updateTechLead(@PathVariable String id,
                                @RequestPart String name,
                                @RequestPart String email,
-                               @RequestPart byte[] profile){
+                               @RequestPart String profile){
 
-        System.out.println("==="+id+name+email);
+
         TechLeadDTO techLeadDTO = new TechLeadDTO(name,email,profile);
         techLeadService.updateTechLead(id,techLeadDTO);
     }

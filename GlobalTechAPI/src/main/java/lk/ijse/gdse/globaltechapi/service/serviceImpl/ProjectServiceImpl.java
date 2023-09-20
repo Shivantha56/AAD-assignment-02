@@ -2,7 +2,6 @@ package lk.ijse.gdse.globaltechapi.service.serviceImpl;
 
 import lk.ijse.gdse.globaltechapi.dto.ProjectDTO;
 import lk.ijse.gdse.globaltechapi.entity.Project;
-import lk.ijse.gdse.globaltechapi.entity.TechLead;
 import lk.ijse.gdse.globaltechapi.repository.ProjectRepository;
 import lk.ijse.gdse.globaltechapi.service.ProjectService;
 import lk.ijse.gdse.globaltechapi.util.EntityDTOConversion;
