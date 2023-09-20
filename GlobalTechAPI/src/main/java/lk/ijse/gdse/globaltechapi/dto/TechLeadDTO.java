@@ -12,9 +12,9 @@ public class TechLeadDTO {
     private String employeeId;
     private String name;
     private String email;
-    private byte[] profile;
+    private String profile;
 
-    public TechLeadDTO(String name, String email, byte[] profile) {
+    public TechLeadDTO(String name, String email, String profile) {
         this.name = name;
         this.email = email;
         this.profile = profile;
