@@ -21,12 +21,20 @@ public class TechLead implements SuperEntity {
     private String name;
     @Column(nullable = false)
     private String email;
-    @Column(nullable = false,columnDefinition = "TEXT")
+    @Lob
+    @Column(nullable = false,columnDefinition = "LongText", length = 2000)
     private String profileImage;
     @OneToMany(mappedBy = "techLeadId")
     private Set<Project> projectSet;
 
-    public TechLead(String name, String email, String profileImage) {
+//    public TechLead(String name, String email, String profileImage) {
+//        this.name = name;
+//        this.email = email;
+//        this.profileImage = profileImage;
+//    }
+
+    public TechLead(String employeeId, String name, String email, String profileImage) {
+        this.employeeId = employeeId;
         this.name = name;
         this.email = email;
         this.profileImage = profileImage;
