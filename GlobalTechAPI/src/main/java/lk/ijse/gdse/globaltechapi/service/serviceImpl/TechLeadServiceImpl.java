@@ -62,8 +62,13 @@ public class TechLeadServiceImpl implements TechLeadService {
 
     @Override
     public void updateTechLead(String id,TechLeadDTO techLeadDTO) {
+        boolean b = techLeadRepository.existsById(id);
 
+        if (techLeadRepository.existsById(id)){
             techLeadRepository.save(new TechLead(techLeadDTO.getEmployeeId(),techLeadDTO.getName(),techLeadDTO.getEmail(),techLeadDTO.getProfileImage()));
+        }else {
+            throw new RuntimeException("TechLead cannot found");
+        }
 
     }
 
