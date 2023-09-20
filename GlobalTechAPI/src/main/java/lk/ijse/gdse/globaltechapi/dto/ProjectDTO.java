@@ -12,4 +12,10 @@ public class ProjectDTO {
     private String projectName;
     private String dueDate;
     private String techLeadId;
+
+    public ProjectDTO(String projectId, String projectName, String dueDate) {
+        this.projectId = projectId;
+        this.projectName = projectName;
+        this.dueDate = dueDate;
+    }
 }
