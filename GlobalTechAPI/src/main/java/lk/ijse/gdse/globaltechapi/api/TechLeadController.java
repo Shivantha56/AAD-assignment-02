@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.annotation.MultipartConfig;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Base64;
 
 @MultipartConfig()
@@ -63,10 +62,11 @@ public class TechLeadController {
     public void updateTechLead(@PathVariable String id,
                                @RequestPart String name,
                                @RequestPart String email,
-                               @RequestPart String profile){
+                               @RequestPart byte[] profile){
 
+        String profileImage = Base64.getEncoder().encodeToString(profile);
 
-        TechLeadDTO techLeadDTO = new TechLeadDTO(name,email,profile);
+        TechLeadDTO techLeadDTO = new TechLeadDTO(id,name,email,profileImage);
         techLeadService.updateTechLead(id,techLeadDTO);
     }
 

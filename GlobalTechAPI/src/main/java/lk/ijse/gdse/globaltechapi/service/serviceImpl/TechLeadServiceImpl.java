@@ -5,12 +5,9 @@ import lk.ijse.gdse.globaltechapi.entity.TechLead;
 import lk.ijse.gdse.globaltechapi.repository.TechLeadRepository;
 import lk.ijse.gdse.globaltechapi.service.TechLeadService;
 import lk.ijse.gdse.globaltechapi.util.EntityDTOConversion;
-import net.bytebuddy.matcher.StringMatcher;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,11 +24,8 @@ public class TechLeadServiceImpl implements TechLeadService {
 
     @Override
     public TechLeadDTO save(TechLeadDTO techLeadDTO) {
-        System.out.println("this is the save method in service pacjage: " + techLeadDTO.getName()+techLeadDTO.getEmployeeId());
-        //base 64 configuration
-        String imageEncode = Base64.getEncoder().encodeToString(techLeadDTO.getProfile());
+        System.out.println(techLeadDTO.getProfileImage());
         TechLead techLeadEntity = entityDTOConversion.getTechLeadEntity(techLeadDTO);
-        techLeadEntity.setProfileImage("this is image 01");
         techLeadRepository.save(techLeadEntity);
         return techLeadDTO;
     }
@@ -68,20 +62,8 @@ public class TechLeadServiceImpl implements TechLeadService {
 
     @Override
     public void updateTechLead(String id,TechLeadDTO techLeadDTO) {
-        Optional<TechLead> byId = techLeadRepository.findById("id");
 
-//        if (byId.isPresent()) {
-//            byId.get().setName(techLeadDTO.getName());
-//            byId.get().setEmail(techLeadDTO.getEmail());
-//            byId.get().setProfileImage("aluth eka");
-//        techLeadRepository.updateTechLeadsByEmployeeId(id,new TechLead(techLeadDTO.getName(),techLeadDTO.getEmail(),"wenas kara"));
-//
-//            techLeadRepository.save(new TechLead(techLeadDTO.getName(),techLeadDTO.getEmail(),"wenas kara"));
-//        }
-
-
-
-
+            techLeadRepository.save(new TechLead(techLeadDTO.getEmployeeId(),techLeadDTO.getName(),techLeadDTO.getEmail(),techLeadDTO.getProfileImage()));
 
     }
 

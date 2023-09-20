@@ -27,11 +27,6 @@ public class TechLead implements SuperEntity {
     @OneToMany(mappedBy = "techLeadId")
     private Set<Project> projectSet;
 
-//    public TechLead(String name, String email, String profileImage) {
-//        this.name = name;
-//        this.email = email;
-//        this.profileImage = profileImage;
-//    }
 
     public TechLead(String employeeId, String name, String email, String profileImage) {
         this.employeeId = employeeId;
