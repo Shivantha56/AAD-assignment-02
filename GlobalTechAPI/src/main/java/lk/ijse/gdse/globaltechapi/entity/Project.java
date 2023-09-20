@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Getter
 @Setter
@@ -20,7 +21,9 @@ public class Project {
     @Column(nullable = false)
     private String dueDate;
     @Column(columnDefinition = "VARCHAR (255) default 'techLead not assign'")
-    private String techLeadId;
+    private String status;
+    @ManyToOne
+    private TechLead techLeadId;
 
     public Project(String projectId, String projectName, String dueDate) {
         this.projectId = projectId;

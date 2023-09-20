@@ -5,10 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,6 +23,8 @@ public class TechLead implements SuperEntity {
     private String email;
     @Column(nullable = false,columnDefinition = "TEXT")
     private String profileImage;
+    @OneToMany(mappedBy = "techLeadId")
+    private Set<Project> projectSet;
 
     public TechLead(String name, String email, String profileImage) {
         this.name = name;

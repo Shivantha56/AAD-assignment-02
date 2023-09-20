@@ -48,9 +48,9 @@ public class ProjectServiceImpl implements ProjectService {
             String projectId = byId.get().getProjectId();
             String projectName = byId.get().getProjectName();
             String dueDate = byId.get().getDueDate();
-            String techLeadId = byId.get().getTechLeadId();
+//            TechLead techLeadId = byId.get().getTechLeadId();
 
-            return new ProjectDTO(projectId, projectName, dueDate, techLeadId);
+            return new ProjectDTO(projectId, projectName, dueDate);
         }
 
         return null;
@@ -64,7 +64,7 @@ public class ProjectServiceImpl implements ProjectService {
         ArrayList<ProjectDTO>getAll = new ArrayList<>();
         for (Project project:all) {
 
-            getAll.add(entityDTOConversion.getProjectDTO(new Project(project.getProjectId(),project.getProjectName(),project.getDueDate(),project.getTechLeadId())));
+//            getAll.add(entityDTOConversion.getProjectDTO(new Project(project.getProjectId(),project.getProjectName(),project.getDueDate(),project.getTechLeadId())));
         }
 
         return getAll;
