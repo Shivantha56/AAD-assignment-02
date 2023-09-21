@@ -2,15 +2,18 @@ package lk.ijse.gdse.globaltechapi.service.serviceImpl;
 
 import lk.ijse.gdse.globaltechapi.dto.TechLeadDTO;
 import lk.ijse.gdse.globaltechapi.entity.TechLead;
+import lk.ijse.gdse.globaltechapi.exception.NotFoundException;
 import lk.ijse.gdse.globaltechapi.repository.TechLeadRepository;
 import lk.ijse.gdse.globaltechapi.service.TechLeadService;
 import lk.ijse.gdse.globaltechapi.util.EntityDTOConversion;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 @Service
 public class TechLeadServiceImpl implements TechLeadService {
 
@@ -49,6 +52,8 @@ public class TechLeadServiceImpl implements TechLeadService {
         TechLead techLead = null;
         if (byId.isPresent()) {
             techLead = byId.get();
+        }else {
+            throw new NotFoundException("tech lead cannot found using provided id");
         }
         return entityDTOConversion.getTechLeadDTO(techLead);
 
@@ -56,20 +61,24 @@ public class TechLeadServiceImpl implements TechLeadService {
 
     @Override
     public String deleteTechLead(String id) {
-        techLeadRepository.deleteById(id);
+
+        if (techLeadRepository.existsById(id)){
+            techLeadRepository.deleteById(id);
+        }else {
+            throw new NotFoundException("techlead can not found");
+        }
         return "TechLead Delete Success";
     }
 
     @Override
-    public void updateTechLead(String id,TechLeadDTO techLeadDTO) {
-        boolean b = techLeadRepository.existsById(id);
-
+    public String updateTechLead(String id,TechLeadDTO techLeadDTO) {
+        //dilshan shivantha
         if (techLeadRepository.existsById(id)){
             techLeadRepository.save(new TechLead(techLeadDTO.getEmployeeId(),techLeadDTO.getName(),techLeadDTO.getEmail(),techLeadDTO.getProfileImage()));
         }else {
-            throw new RuntimeException("TechLead cannot found");
+            throw new NotFoundException("TechLead cannot found");
         }
-
+        return "update success";
     }
 
 

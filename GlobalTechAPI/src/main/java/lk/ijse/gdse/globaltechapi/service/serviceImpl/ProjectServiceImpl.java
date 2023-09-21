@@ -1,16 +1,14 @@
 package lk.ijse.gdse.globaltechapi.service.serviceImpl;
 
-import com.mysql.cj.xdevapi.SessionFactory;
+
 import lk.ijse.gdse.globaltechapi.dto.ProjectDTO;
 import lk.ijse.gdse.globaltechapi.entity.Project;
 import lk.ijse.gdse.globaltechapi.entity.TechLead;
+import lk.ijse.gdse.globaltechapi.exception.NotFoundException;
 import lk.ijse.gdse.globaltechapi.repository.ProjectRepository;
 import lk.ijse.gdse.globaltechapi.repository.TechLeadRepository;
 import lk.ijse.gdse.globaltechapi.service.ProjectService;
 import lk.ijse.gdse.globaltechapi.util.EntityDTOConversion;
-import org.hibernate.Session;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
@@ -52,39 +50,35 @@ public class ProjectServiceImpl implements ProjectService {
 
 
         } else {
-            throw new RuntimeException("Tech lead can not find with that id");
+            throw new NotFoundException("Tech lead can not find with the provided id");
         }
-
-//        Project projectEntity = entityDTOConversion.getProjectEntity(projectDTO);
-//        projectRepository.save(new Project(projectEntity.getProjectId(),projectEntity.getProjectName(),projectEntity.getDueDate()));
         return entityDTOConversion.getProjectDTO(project);
     }
 
     @Override
     public String delete(String id) {
-        projectRepository.deleteById(id);
-        return "project delete success";
+
+        if (projectRepository.existsById(id)) { // coming lazy initialisation and session proxy error
+            projectRepository.deleteById(id);
+            return "project delete success";
+        }
+        throw new NotFoundException("can not find project with provided id");
     }
 
     @Override
     public ProjectDTO getProjectInfo(String id) {
 
-//        Project byId = projectRepository.getById(id);
-//        byId.setTechLeadId("no");
-//        ProjectDTO projectDTO = entityDTOConversion.getProjectDTO(byId);
+
         Optional<Project> byId = projectRepository.findById(id);
         if (byId.isPresent()) {
             String projectId = byId.get().getProjectId();
             String projectName = byId.get().getProjectName();
             String dueDate = byId.get().getDueDate();
-//            TechLead techLeadId = byId.get().getTechLeadId();
-
             return new ProjectDTO(projectId, projectName, dueDate);
         }
 
         return null;
-        // todo : getInformation using the getByID();
-//        return entityDTOConversion.getProjectDTO(new Project(byId.getProjectId(), byId.getProjectName(), byId.getDueDate(), byId.getTechLeadId()));
+
     }
 
     @Override
@@ -92,16 +86,26 @@ public class ProjectServiceImpl implements ProjectService {
         List<Project> all = projectRepository.findAll();
         ArrayList<ProjectDTO> getAll = new ArrayList<>();
         for (Project project : all) {
-
-//            getAll.add(entityDTOConversion.getProjectDTO(new Project(project.getProjectId(),project.getProjectName(),project.getDueDate(),project.getTechLeadId())));
+            ProjectDTO projectDTO = entityDTOConversion.getProjectDTO(new Project(project.getProjectId(), project.getProjectName(), project.getDueDate(), project.getTechLeadId()));
+            getAll.add(projectDTO);
         }
-
         return getAll;
-
     }
 
     @Override
-    public void update(String id) {
-        //todo : have to implement in using custom created queries
+    public void update(String id,ProjectDTO projectDTO) {
+        if (projectRepository.existsById(id)){
+            if (techLeadRepository.existsById(projectDTO.getTechLeadId())){
+                TechLead techLead = techLeadRepository.getById(projectDTO.getTechLeadId());
+                projectRepository.save(new Project(projectDTO.getProjectId(), projectDTO.getProjectName(), projectDTO.getDueDate(),techLead));
+            }else {
+                throw new NotFoundException("Tech lead cann not found with that provided id");
+            }
+
+        }else {
+            throw new NotFoundException("project cannot found");
+        }
+
     }
+
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d2cefd70-7fe5-4de2-9b18-ec7619bbcfc5" name="Changes" comment="join query">
+      <change beforePath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/api/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/api/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/api/TechLeadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/api/TechLeadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/service/TechLeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/service/TechLeadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/service/serviceImpl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/service/serviceImpl/ProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/service/serviceImpl/TechLeadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/GlobalTechAPI/src/main/java/lk/ijse/gdse/globaltechapi/service/serviceImpl/TechLeadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlobalTechAPI/src/main/webapp/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2VhW324txYAXWjBJWfJZ0rWGcJB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Working directory/ongoing project/AAD-assignment-02",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "2cec23103df2e6ca1174dcb96e5f108a",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2cefd70-7fe5-4de2-9b18-ec7619bbcfc5" name="Changes" comment="" />
+      <created>1695288590377</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695288590377</updated>
+      <workItem from="1695288593421" duration="561000" />
+    </task>
+    <task id="LOCAL-00001" summary="join query">
+      <option name="closed" value="true" />
+      <created>1695288755496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695288755498</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="join query" />
+    <option name="LAST_COMMIT_MESSAGE" value="join query" />
+  </component>
+</project>

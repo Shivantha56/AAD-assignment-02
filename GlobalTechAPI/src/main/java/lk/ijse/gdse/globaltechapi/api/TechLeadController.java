@@ -1,6 +1,7 @@
 package lk.ijse.gdse.globaltechapi.api;
 
 import lk.ijse.gdse.globaltechapi.dto.TechLeadDTO;
+import lk.ijse.gdse.globaltechapi.exception.InvalidException;
 import lk.ijse.gdse.globaltechapi.service.TechLeadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,6 +30,16 @@ public class TechLeadController {
                              @RequestPart String name,
                              @RequestPart String email,
                              @RequestPart byte[] profile){
+
+        if(employeeId == null){
+            throw new InvalidException("Invalid id");
+        } else if (name == null) {
+            throw new InvalidException("Invalid project name");
+        } else if (email == null || email.matches("^\\\\S+@\\\\S+\\\\.\\\\S+$")) {
+            throw new InvalidException("Invalid email");
+        }else if (profile==null){
+            throw new InvalidException("Invalid profile image");
+        }
 
         // todo : crate using Model attribute
 //        String id = techLeadDTO.getEmployeeId();
