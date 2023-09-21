@@ -1,0 +1,9 @@
+SELECT
+p.projectId,
+p.projectName,
+p.dueDate,
+t.name AS techLeadName
+         FROM
+             project AS p
+                 JOIN
+             techlead AS t ON p.techLeadId_employeeId = t.employeeId;
