@@ -10,7 +10,7 @@ GolabalTechAPI Project Management tool
   - Validating all fields and handling exceptions
   - All configurations done
   - used the build tool as the Gradle
-  - #provide documentation for APIs using the postman
+  - #provided documentation for APIs using the postman
 
 #Enttiy relationship diagram
 ![raltion diagram](https://github.com/Shivantha56/AAD-assignment-02/assets/111634293/9df6f515-0172-4f25-a934-9e38ad54c5ae)
