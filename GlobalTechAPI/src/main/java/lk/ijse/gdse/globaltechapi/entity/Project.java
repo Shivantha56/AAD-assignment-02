@@ -20,8 +20,6 @@ public class Project {
     private String projectName;
     @Column(nullable = false)
     private String dueDate;
-    @Column(columnDefinition = "VARCHAR (255) default 'techLead not assign'")
-    private String status;
     @ManyToOne
     private TechLead techLeadId;
 

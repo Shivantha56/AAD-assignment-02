@@ -16,8 +16,8 @@ public class ProjectController {
     ProjectService projectService;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
-    public ProjectDTO saveProject(@RequestPart String projectId, @RequestPart String projectName, @RequestPart String dueDate){
-        return projectService.save(new ProjectDTO(projectId,projectName,dueDate));
+    public ProjectDTO saveProject(@RequestPart String projectId, @RequestPart String projectName, @RequestPart String dueDate, @RequestPart String techLeadId){
+        return projectService.save(new ProjectDTO(projectId,projectName,dueDate),techLeadId);
     }
 
     @GetMapping(path = "{id}",produces = MediaType.APPLICATION_JSON_VALUE)
