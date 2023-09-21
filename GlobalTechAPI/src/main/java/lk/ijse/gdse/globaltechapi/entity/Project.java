@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @AllArgsConstructor
 @ToString
 @Entity
-public class Project {
+public class Project implements SuperEntity {
     @Id
     private String projectId;
     @Column(nullable = false)
