@@ -25,5 +25,12 @@ Entity relational diagram
 
 Welcome to the API documentation for IJSE Assignment 02. This documentation will provide you with all the necessary information about this API.
 
-<font size ="100"> Table of content </font>
+Table of contents
+  1. Introduction
+  2. Endpoints
+  3. Request Format
+  4. Response Format
+  5. Error handling
+  6. Sample request
+  7. Conclusion
 
