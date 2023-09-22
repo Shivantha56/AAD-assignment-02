@@ -35,6 +35,5 @@ Table of contents
   7. Conclusion
 
 1.**Introduction.**
-   This is a simple API developed by using Java language and framework as Spring Web MVC. This
-   API provides basic crud operations to manipulate and extract data from the database
+This is a simple API developed by using Java language and framework as Spring Web MVC. This API provides basic crud operations to manipulate and extract data from the database
 
