@@ -14,6 +14,7 @@ GolabalTechAPI Project Management tool
   - used the build tool as the Gradle
   - #provided documentation for APIs using the postman
 
-#Enttiy relationship diagram
-![raltion diagram](https://github.com/Shivantha56/AAD-assignment-02/assets/111634293/9df6f515-0172-4f25-a934-9e38ad54c5ae)
+Entity relational diagram
+![raltion diagram](https://github.com/Shivantha56/AAD-assignment-02/assets/111634293/bdf0b310-fcfd-4f25-8a5c-65c79ddbcc28)
+
 
