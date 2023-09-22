@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="GlobalTechAPI" />
+        <module name="Test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Test02" target="1.8" />
+      <module name="Test02.main" target="1.8" />
+      <module name="Test02.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

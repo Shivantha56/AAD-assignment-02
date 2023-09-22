@@ -31,7 +31,7 @@ public class TechLeadController {
                              @RequestPart String email,
                              @RequestPart byte[] profile){
 
-        if(employeeId == null){
+        if(employeeId == null || !employeeId.matches("(EMP-)[0-9]{3}")){
             throw new InvalidException("Invalid id");
         } else if (name == null) {
             throw new InvalidException("Invalid project name");
