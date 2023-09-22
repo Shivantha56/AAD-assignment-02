@@ -21,4 +21,7 @@ Entity relational diagram
 - **USE assignment02dilshanshivantha**
 - **SELECT p.projectId, p.projectName, p.dueDate, t.name AS techLeadName FROM project AS p JOIN techlead AS t ON p.techLeadId_employeeId = t.employeeId;**
 
+##API Documentation
+
+Welcome to the API documentation for IJSE Assignment 02. This documentation will provide you with all the necessary information about this API.
 
