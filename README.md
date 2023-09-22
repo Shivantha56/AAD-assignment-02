@@ -17,7 +17,7 @@ GolabalTechAPI Project Management tool
 Entity relational diagram
 ![raltion diagram](https://github.com/Shivantha56/AAD-assignment-02/assets/111634293/bdf0b310-fcfd-4f25-8a5c-65c79ddbcc28)
 
-<h5>If you want to look at project details copy and paste the below query inside your MySQL database client</h5>
+### If you want to look at project details copy and paste the below query inside your MySQL database client
 - **USE assignment02dilshanshivantha**
 - **SELECT p.projectId, p.projectName, p.dueDate, t.name AS techLeadName FROM project AS p JOIN techlead AS t ON p.techLeadId_employeeId = t.employeeId;**
 
