@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Update_at_9_22_2023_1_28_PM_[Changes]" date="1695369519879" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_22_2023_1_28_PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 9/22/2023 1:28 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="GlobalTechAPI/mvnw" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Test/.mvn/wrapper/maven-wrapper.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_22_2023_1_28_PM_[Changes]/maven-wrapper.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="GlobalTechAPI/mvnw.cmd" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="GlobalTechAPI/src/main/resources/website/assets/img/head-shot-portrait-close-smiling-250nw-1714666150.webp" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Test/src/main/resources/website/assets/img/head-shot-portrait-close-smiling-250nw-1714666150.webp" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_22_2023_1_28_PM_[Changes]/head-shot-portrait-close-smiling-250nw-1714666150.webp" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="GlobalTechAPI/.mvn/wrapper/maven-wrapper.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
