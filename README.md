@@ -25,5 +25,5 @@ Entity relational diagram
 
 Welcome to the API documentation for IJSE Assignment 02. This documentation will provide you with all the necessary information about this API.
 
-<font size ="5"> Table of content </font>
+<font size ="100"> Table of content </font>
 
