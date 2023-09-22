@@ -12,14 +12,14 @@ GolabalTechAPI Project Management tool
   - Validating all fields and handling exceptions
   - All configurations done
   - used the build tool as the Gradle
-  - #provided documentation for APIs using the postman
+  - #provided documentation for APIs using the Postman
 
 Entity relational diagram
 ![raltion diagram](https://github.com/Shivantha56/AAD-assignment-02/assets/111634293/bdf0b310-fcfd-4f25-8a5c-65c79ddbcc28)
 
 ### If you want to look at project details copy and paste the below query inside your MySQL database client
 - **USE assignment02dilshanshivantha**
-- **SELECT p.projectId, p.projectName, p.dueDate, t.name AS techLeadName FROM project AS p JOIN techlead AS t ON p.techLeadId_employeeId = t.employeeId;**
+- **SELECT p.projectId, p.projectName, p.dueDate, t.name AS techLeadName FROM project AS p JOIN tech lead AS t ON p.techLeadId_employeeId = t.employeeId;**
 
 ## API Documentation
 
@@ -35,5 +35,6 @@ Table of contents
   7. Conclusion
 
 1.**Introduction.**
+
 This is a simple API developed by using Java language and framework as Spring Web MVC. This API provides basic crud operations to manipulate and extract data from the database
 
