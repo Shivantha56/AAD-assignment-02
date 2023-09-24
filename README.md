@@ -40,5 +40,15 @@ This is a simple API developed by using Java language and framework as Spring We
 
 1.**Endpoints.**
 
-- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead (http method - post , endpoint for saving tech lead)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead (HTTP method - post , endpoint for saving tech lead)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/ (HTTP mehod - get , endpoint for get all techlead details)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/EMP-001 (HTTP method - get , endpoint for get selected techlead details)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/EMP-001 (HTTP method - patch , endpoint for update techlead details)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/EMP-001 (HTTP method - delete, endpoint for delete techlead details)
+
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project (HTTP method - post , endpoint for saving project)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project (HTTP mehod - get , endpoint for get all project details)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001 (HTTP method - get , endpoint for get selected project details)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001 (HTTP method - patch , endpoint for update project details)
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001 (HTTP method - delete, endpoint for delete project details)
 
