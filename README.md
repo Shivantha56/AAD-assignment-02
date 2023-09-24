@@ -1,7 +1,7 @@
 # AAD-assignment-02
 You can find the source code here "Assignment 02 (Dilshan Shivantha)"
 
-[source code](https://github.com/Shivantha56/AAD-assignment-02/tree/main/Assignment%2002%20(Dilshan%20Shivantha))
+[Source code](https://github.com/Shivantha56/AAD-assignment-02/tree/main/Assignment%2002%20(Dilshan%20Shivantha))
 
 click below button to find out the API documentation
 
