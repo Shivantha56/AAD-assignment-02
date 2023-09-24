@@ -7,7 +7,7 @@ GolabalTechAPI Project Management tool
 
   - This project has two APIs TechleadController and ProjectController
   - Implemented basic crud operations using spring data jpa (vendor: hibernate)
-  - Request handle using multipart form data and json
+  - Request handled using multipart form data and json
   - Image encoder included
   - Validating all fields and handling exceptions
   - All configurations done
