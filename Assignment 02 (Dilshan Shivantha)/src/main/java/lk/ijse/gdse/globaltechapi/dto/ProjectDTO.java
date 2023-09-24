@@ -5,7 +5,6 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 @Data
 public class ProjectDTO {
@@ -14,12 +13,12 @@ public class ProjectDTO {
     private String dueDate;
     private String techLeadId;
 
-//    public ProjectDTO(String projectId, String projectName, String dueDate, String techLeadId) {
-//        this.projectId = projectId;
-//        this.projectName = projectName;
-//        this.dueDate = dueDate;
-//        this.techLeadId = techLeadId;
-//    }
+    public ProjectDTO(String projectId, String projectName, String dueDate, String techLeadId) {
+        this.projectId = projectId;
+        this.projectName = projectName;
+        this.dueDate = dueDate;
+        this.techLeadId = techLeadId;
+    }
 
     public ProjectDTO(String projectId, String projectName, String dueDate) {
         this.projectId = projectId;

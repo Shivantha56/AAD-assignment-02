@@ -3,7 +3,6 @@ package lk.ijse.gdse.globaltechapi.api;
 import lk.ijse.gdse.globaltechapi.dto.ProjectDTO;
 import lk.ijse.gdse.globaltechapi.exception.InvalidException;
 import lk.ijse.gdse.globaltechapi.service.ProjectService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -14,14 +13,18 @@ import java.util.ArrayList;
 @RequestMapping("/api/v1/project")
 public class ProjectController {
 
-    @Autowired
+    final
     ProjectService projectService;
+
+    public ProjectController(ProjectService projectService) {
+        this.projectService = projectService;
+    }
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
     public ProjectDTO saveProject(@RequestPart String projectId, @RequestPart String projectName, @RequestPart String dueDate, @RequestPart String techLeadId){
 
-        if(projectId == null){
+        if(projectId == null || !projectId.matches("P[0-9]{2}-[0-9]{3}")){
             throw new InvalidException("Invalid id");
         } else if (projectName == null) {
             throw new InvalidException("Invalid project name");
@@ -46,6 +49,7 @@ public class ProjectController {
         return projectService.delete(id);
     }
 
+    @ResponseStatus(HttpStatus.FOUND)
     @GetMapping
     public ArrayList<ProjectDTO> getAll(){
         return projectService.getAllProjects();

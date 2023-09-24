@@ -58,7 +58,7 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public String delete(String id) {
 
-        if (projectRepository.existsById(id)) { // coming lazy initialisation and session proxy error
+        if (projectRepository.existsById(id)) { // coming lazy initialisation and session proxy error fix
             projectRepository.deleteById(id);
             return "project delete success";
         }

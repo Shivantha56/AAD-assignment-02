@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "596fdb63-a485-435d-bd3a-15d05f26de67",
+		"name": "Spring assignment 02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28171920"
+	},
+	"item": [
+		{
+			"name": "TechLead",
+			"item": [
+				{
+					"name": "save tech lead",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employeeId",
+									"value": "EMP-001",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "dilshan shivantha",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "isuru@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "WhatsApp Image 2023-06-27 at 04.27.27.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"techlead"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all tech lead",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"techlead",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get the one tech lead detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/EMP-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"techlead",
+								"EMP-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update techlead",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employeeId",
+									"value": "EMP-0",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Isuru Dana",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Isuru@gmail.co,",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "WhatsApp Image 2023-06-27 at 04.27.27.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/EMP-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"techlead",
+								"EMP-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete techlead details",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/EMP-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"techlead",
+								"EMP-001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "save project details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "projectId",
+									"value": "P00-001",
+									"type": "text"
+								},
+								{
+									"key": "projectName",
+									"value": "developing email client",
+									"type": "text"
+								},
+								{
+									"key": "dueDate",
+									"value": "2025-05-01",
+									"type": "text"
+								},
+								{
+									"key": "techLeadId",
+									"value": "EMP-001",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"project"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "P00-001",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all project details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get selected project details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"project",
+								"P00-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update project details",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "projectId",
+									"value": "P00-001",
+									"type": "text"
+								},
+								{
+									"key": "projectName",
+									"value": "developing email ",
+									"type": "text"
+								},
+								{
+									"key": "dueDate",
+									"value": "2025-05-01",
+									"type": "text"
+								},
+								{
+									"key": "techLeadId",
+									"value": "EMP-001",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"project",
+								"P00-001"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "P00-001",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war",
+								"api",
+								"v1",
+								"project",
+								"P00-001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

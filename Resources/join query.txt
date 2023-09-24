@@ -1,3 +1,6 @@
+USE aad_assignment_02_dilshan_shivantha;
+
+
 SELECT
 p.projectId,
 p.projectName,
