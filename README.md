@@ -38,3 +38,7 @@ Table of contents
 
 This is a simple API developed by using Java language and framework as Spring Web MVC. This API provides basic crud operations to manipulate and extract data from the database
 
+1.**Endpoints.**
+
+- http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead (http method - post , endpoint for saving tech lead)
+
