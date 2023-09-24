@@ -50,7 +50,7 @@ This is a simple API developed by using Java language and framework as Spring We
 - http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001 (HTTP method - delete, endpoint for delete project details)
 
 
-3.**Request Format.**
+4.**Request Format.**
 
 All requests are made using the HTTP 'GET','POST','PUT','DLETE' methods. Depending on the endpoint. The required request parameters and are documented for each endpoint in the API documentation
 
