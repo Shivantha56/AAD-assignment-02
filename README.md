@@ -30,15 +30,12 @@ Table of contents
   2. Endpoints
   3. Request Format
   4. Response Format
-  5. Error handling
-  6. Sample request
-  7. Conclusion
-
+  
 1.**Introduction.**
 
 This is a simple API developed by using Java language and framework as Spring Web MVC. This API provides basic crud operations to manipulate and extract data from the database
 
-1.**Endpoints.**
+2.**Endpoints.**
 
 - http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead (HTTP method - post , endpoint for saving tech lead)
 - http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/techlead/ (HTTP mehod - get , endpoint for get all techlead details)
@@ -52,3 +49,11 @@ This is a simple API developed by using Java language and framework as Spring We
 - http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001 (HTTP method - patch , endpoint for update project details)
 - http://localhost:8080/Gradle___lk_ijse_gdse___Assignment_02__Dilshan_Shivantha__1_0_SNAPSHOT_war/api/v1/project/P00-001 (HTTP method - delete, endpoint for delete project details)
 
+
+3.**Request Format.**
+
+All requests are made using the HTTP 'GET','POST','PUT','DLETE' methods. Depending on the endpoint. The required request parameters and are documented for each endpoint in the API documentation
+
+3.**Response Format.**
+
+Responses from the API are in JSON format by default. Each response will contain relevant data and metadata, making it easy to parse and utilize the information in your application.
