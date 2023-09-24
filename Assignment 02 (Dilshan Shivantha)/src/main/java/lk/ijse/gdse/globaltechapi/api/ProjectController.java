@@ -40,12 +40,18 @@ public class ProjectController {
     @ResponseStatus(HttpStatus.FOUND)
     @GetMapping(path = "{id}",produces = MediaType.APPLICATION_JSON_VALUE)
     public ProjectDTO getProjectInfo(@PathVariable String id){
+        if(id == null || !id.matches("P[0-9]{2}-[0-9]{3}")){
+            throw new InvalidException("Invalid id");
+        }
         return projectService.getProjectInfo(id);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping(path = "{id}")
     public String deleteProject(@PathVariable String id){
+        if(id == null || !id.matches("P[0-9]{2}-[0-9]{3}")){
+            throw new InvalidException("Invalid id");
+        }
         return projectService.delete(id);
     }
 
@@ -58,6 +64,9 @@ public class ProjectController {
     @ResponseStatus(HttpStatus.CREATED)
     @PatchMapping(path = "{id}")
     public String updateProject(@PathVariable String id,@RequestPart String projectId, @RequestPart String projectName, @RequestPart String dueDate, @RequestPart String techLeadId){
+        if(projectId == null || !projectId.matches("P[0-9]{2}-[0-9]{3}")){
+            throw new InvalidException("Invalid id");
+        }
         projectService.update(id,new ProjectDTO(projectId,projectName,dueDate,techLeadId));
         return "project updated";
     }

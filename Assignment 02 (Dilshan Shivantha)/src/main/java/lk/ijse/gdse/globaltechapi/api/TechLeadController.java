@@ -60,11 +60,17 @@ public class TechLeadController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE,path = "{id}")
     public TechLeadDTO getTechLeadInfo(@PathVariable String id){
+        if(id == null || !id.matches("(EMP-)[0-9]{3}")){
+            throw new InvalidException("Invalid id");
+        }
         return techLeadService.getTechLeadInfo(id);
     }
 
     @DeleteMapping(path = "{id}")
     public String deleteTechLead(@PathVariable String id){
+        if(id == null || !id.matches("(EMP-)[0-9]{3}")){
+            throw new InvalidException("Invalid id");
+        }
         return techLeadService.deleteTechLead(id);
     }
 
@@ -74,6 +80,9 @@ public class TechLeadController {
                                @RequestPart String name,
                                @RequestPart String email,
                                @RequestPart byte[] profile){
+        if(id == null || !id.matches("(EMP-)[0-9]{3}")){
+            throw new InvalidException("Invalid id");
+        }
 
         String profileImage = Base64.getEncoder().encodeToString(profile);
 
